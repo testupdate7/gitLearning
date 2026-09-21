@@ -129,6 +129,12 @@ git commit -m "commit message"
 git commit -m "initial commit"
 
 
+
+git cherry-pick <commit-hash>
+
+git cherry-pick <commit-hash> <commit-hash>
+
+
 ==================================================
 GIT RESTORE
 ==================================================
