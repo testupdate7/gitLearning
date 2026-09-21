@@ -1,0 +1,340 @@
+==================================================
+GIT BRANCH
+==================================================
+
+# Show local branches
+git branch
+
+# Show detailed local branches
+git branch -v
+
+# Show all local + remote branches
+git branch -a
+
+# Create a new branch
+git branch branch-name
+
+# Switch to a branch
+git switch branch-name
+
+# Old way to switch branch
+git checkout branch-name
+
+# Create + switch to new branch
+git switch -c branch-name
+
+# Old way: create + switch
+git checkout -b branch-name
+
+# Delete a merged branch
+git branch -d branch-name
+
+# Force delete a branch
+git branch -D branch-name
+
+# Rename current branch
+git branch -m new-branch-name
+
+# Rename specific branch
+git branch -m old-name new-name
+
+
+==================================================
+GIT MERGE
+==================================================
+
+# Switch to the branch where you want changes
+git switch target-branch
+
+# Merge another branch into current branch
+git merge source-branch
+
+# Example: master code -> rd-learning
+git switch rd-learning
+git merge master
+
+# Example: rd-learning code -> master
+git switch master
+git merge rd-learning
+
+# Cancel an ongoing merge
+git merge --abort
+
+
+==================================================
+GIT LOG / HISTORY
+==================================================
+
+# Full commit history
+git log
+
+# Short commit history
+git log --oneline
+
+# Show all branches in history
+git log --oneline --all --decorate
+
+# Visual branch history
+git log --oneline --graph --all --decorate
+
+# Show last 3 commits
+git log --oneline -3
+
+# Show commits in rd-learning but not master
+git log master..rd-learning --oneline
+
+# Show commits in master but not rd-learning
+git log rd-learning..master --oneline
+
+
+==================================================
+GIT STATUS
+==================================================
+
+# Check current repository status
+git status
+
+
+==================================================
+GIT DIFF
+==================================================
+
+# Show unstaged changes
+git diff
+
+# Show staged changes
+git diff --cached
+
+# Compare two branches
+git diff master..rd-learning
+
+# Show only changed file names
+git diff --name-only master..rd-learning
+
+
+==================================================
+GIT ADD / COMMIT
+==================================================
+
+# Add specific file
+git add file-name
+
+# Add all changes
+git add .
+
+# Commit changes
+git commit -m "commit message"
+
+# Example
+git commit -m "initial commit"
+
+
+==================================================
+GIT RESTORE
+==================================================
+
+# Discard changes from a file
+git restore file-name
+
+# Example
+git restore revert-test.txt
+
+# Restore multiple/all files
+git restore .
+
+# Unstage a file
+git restore --staged file-name
+
+
+==================================================
+GIT RESET
+==================================================
+
+# Soft reset
+# Remove commit but keep changes staged
+git reset --soft HEAD~1
+
+# Mixed reset
+# Remove commit and unstage changes
+git reset --mixed HEAD~1
+
+# Default reset is mixed
+git reset HEAD~1
+
+# Hard reset
+# Remove commit + staged changes + working changes
+git reset --hard HEAD~1
+
+# Reset to a specific commit
+git reset --soft commit-id
+git reset --mixed commit-id
+git reset --hard commit-id
+
+
+==================================================
+GIT REVERT
+==================================================
+
+# Undo a specific commit by creating a NEW commit
+git revert commit-id
+
+# Example
+git revert 9d68f69
+
+# View revert commit
+git log --oneline
+
+
+==================================================
+GIT STASH
+==================================================
+
+# Temporarily save tracked changes
+git stash
+
+# Save tracked + untracked files
+git stash -u
+
+# Save stash with a message
+git stash push -m "my temporary work"
+
+# Show stash list
+git stash list
+
+# Apply latest stash and remove it from stash list
+git stash pop
+
+# Apply latest stash but keep it in stash list
+git stash apply
+
+# Delete a specific stash
+git stash drop stash@{0}
+
+# Delete all stashes
+git stash clear
+
+
+==================================================
+.GITIGNORE
+==================================================
+
+# Create .gitignore in PowerShell
+New-Item .gitignore -ItemType File
+
+# View .gitignore
+Get-Content .gitignore
+
+# Example .gitignore content
+
+node_modules/
+.env
+*.log
+dist/
+
+# Add .gitignore
+git add .gitignore
+
+# Commit .gitignore
+git commit -m "add gitignore"
+
+
+==================================================
+GITHUB / REMOTE
+==================================================
+
+# Show configured remote repositories
+git remote -v
+
+# Add GitHub repository as origin
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+
+# Remove a remote
+git remote remove origin
+
+# Change remote URL
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+
+
+==================================================
+GIT PUSH
+==================================================
+
+# Push local branch to GitHub
+git push origin master
+
+# First push + set upstream
+git push -u origin master
+
+# Push current branch
+git push
+
+# Push a new feature branch
+git push -u origin feature-login
+
+
+==================================================
+GIT FETCH / PULL
+==================================================
+
+# Download latest remote information
+git fetch
+
+# Fetch from origin
+git fetch origin
+
+# Download + integrate remote changes
+git pull
+
+# Pull from specific branch
+git pull origin master
+
+
+==================================================
+REMOTE BRANCHES
+==================================================
+
+# Show remote branches
+git branch -r
+
+# Show local + remote branches
+git branch -a
+
+# Show branch tracking information
+git branch -vv
+
+
+==================================================
+GIT CLONE
+==================================================
+
+# Clone GitHub repository
+git clone https://github.com/USERNAME/REPOSITORY.git
+
+# Clone into a specific folder
+git clone https://github.com/USERNAME/REPOSITORY.git folder-name
+
+
+==================================================
+COMMON POWERHELL COMMANDS WE USED
+==================================================
+
+# Go to project folder
+cd D:\Data\git-learning
+
+# Go one level up
+cd D:\Data
+
+# Create a file
+New-Item file.txt -ItemType File
+
+# Create file with content
+Set-Content file.txt "Hello"
+
+# Add content to existing file
+Add-Content file.txt "New line"
+
+# Read file
+Get-Content file.txt
+
+# Show files including hidden files
+Get-ChildItem -Force

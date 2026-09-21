@@ -1,0 +1,23 @@
+# Current branches
+git branch
+
+# Create branch
+git branch feature-login
+
+# Switch branch
+git switch feature-login
+
+# Create + switch
+git switch -c feature-login
+
+# Switch back
+git switch master
+
+# Merge
+git merge feature-login
+
+# Delete branch
+git branch -d feature-login
+
+# Force Delete branch
+git branch -D feature-login
