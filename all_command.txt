@@ -279,6 +279,9 @@ git push
 # Push a new feature branch
 git push -u origin feature-login
 
+# git push branch different branch name 
+git push <remote> <local-branch>:<remote-branch>
+
 
 ==================================================
 GIT FETCH / PULL
