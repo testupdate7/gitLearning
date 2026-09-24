@@ -1,0 +1,12 @@
+Practice restore command 
+
+I made some changes
+ADD third changes
+
+
+Reset practice
+
+uncommit changes
+
+add reset commit
+

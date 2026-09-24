@@ -1,0 +1,47 @@
+# Current branch
+git branch
+
+# Detailed branch information
+git branch -v
+
+# All local and remote branches
+git branch -a
+
+# Create branch
+git branch feature-login
+
+# Switch branch
+git switch feature-login
+
+# Old way
+git checkout feature-login
+
+# Create + switch
+git switch -c feature-login
+
+# Old way
+git checkout -b feature-login
+
+# Merge source branch into current branch
+git merge master
+
+# Cancel a merge
+git merge --abort
+
+# Delete merged branch
+git branch -d feature-login
+
+# Force delete branch
+git branch -D feature-login
+
+# Rename current branch
+git branch -m new-name
+
+# See branch graph
+git log --oneline --graph --all --decorate
+
+# Compare commits
+git log master..rd-learning --oneline
+
+# Compare files
+git diff --name-only master..rd-learning

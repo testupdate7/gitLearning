@@ -1,0 +1,16 @@
+Command                  Meaning            
+`git --version`         Git version check 
+`git config`            Git settings
+`git init`              Repository create
+`git status`            Current Git status
+`git add`               Changes staging mein
+`git commit`            Checkpoint create
+`git log`               Commit history      
+`git diff`              Changes compare     
+`git restore`           Changes restore/undo
+`git branch`            Branches manage     
+`git switch`            Branch change       
+`git clone`             Repository copy     
+`git remote`            Remote check/manage 
+`git push`              Local → GitHub      
+`git pull`              GitHub → Local      
